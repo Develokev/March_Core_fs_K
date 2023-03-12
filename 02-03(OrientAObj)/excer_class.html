@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        //Ejercicio 1
+        //Para comenzar vamos a crear un objeto sencillo que se usa para guardar información sobre las calificaciones de un alumno. El curso contiene tres materias: Ingles, programación y HTM, y el objeto contendrá el nombre del alumno y la calificación en cada una de ellas. El script imprimirá el nombre y la media de sus calificaciones
+
+        // objAlumno = {
+        //     nombre: 'Kevin',
+        //     ingles: 7,
+        //     programacion: 6,
+        //     html: 9
+        // }
+
+        // let media = (objAlumno.ingles + objAlumno.programacion + objAlumno.html) / 3;
+
+        // const calcularMedia = () => {
+            
+        //     return
+        // }
+
+        // calcularMedia();
+        // console.log(objAlumno.nombre + " tiene una media de: " + media);
+
+
+        //Ejercicio 2
+        //Define un objeto, mediante una expresión, que tenga dos propiedades: precio y descuento y un método neto. El método calculará el precio con el descuento aplicado. Los valores se pedirán por teclado   
+        
+        const objCosa = {
+            precio: 0,
+            descuento: 0,
+            neto: function() {
+              return (this.precio*this.descuento/100);
+            }
+        }  
+
+        console.log(objCosa.precio)
+        
+        objCosa.precio += parseFloat(prompt("Hola, cuanto cuesta este producto?"));
+        objCosa.descuento += parseFloat(prompt("Gracias, y que descuento tiene?"))
+
+        const aPagar = console.log("Tu producto te queda en" + objCosa.neto());
+        
+
+
+
+        //Ejercicio 3
+        // En esta propuesta debes crear una clase de nombre piedra (con class o con function) con dos propiedades: masa, volumen y un método densidad que calcule este valor (masa/volumen). Luego instancia al menos un objeto de esta clase, dale un valor a su masa y a su volumen y ejecuta el método densidad.
+
+
+        // class Piedra {
+        //     constructor(masa, volumen) {
+        //     this.masa = masa;
+        //     this.volumen = volumen;
+        //     }
+
+        //     densidad = function(){
+        //         return (this.masa*this.volumen)
+        //     }
+        // }
+
+        // const pedruzco = new Piedra (30, 50);
+        // console.log("densidad:" + pedruzco.densidad());
+
+    </script>
+</body>
+</html>

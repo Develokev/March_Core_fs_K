@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+       function alumno(nombre, edad, email) {        //Una función constructora nunca puede retornar algo. =!RETURN.
+            this.nombre = nombre;  //especificamos con el this. que esta propiedad es pública, de acceso for all.
+            this.edad = edad;
+            let correo = email; //si declaramos con LET, hacemos la propiedad privada. Significa que no podemos acceder a esa propiedad ni modificarla. En algún momento puede resultar eficiente no poder acceder a xs propiedad y bloquearla de esta forma.
+        }
+
+        //el método constructor SIEMPRE deberá llamarse 'constructor'
+
+        const alumno1 = new alumno('ana', 30, 'anacorreo@correo.com');
+        const alumno2 = new alumno('kevin', 29, 'kevin@correo.com')
+        console.log(alumno1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+Para el desarrollo desde cero de un programa
+
+Crear el archivo APP.EJS, al mayor nivel. (Aquí vamos a operar la mayoría de las generalidades de nuestro programa).
+Inicializar NPM START, para activar el NODE, y luego instalar las dependiencias correspondientes que utilizaremos. (Mongoose, Express, cors, )
+
+Crear archivos GITIGNORE y .ENV en donde trabajaremos nuestras variables de entorno.
+Escribir en las dependiencias del archivo PACKAGE.JSON, y añadir el start y el DEV.
+
+Inicializamos GIT INIT en la terminal, para configurar la conexión en remoto con Git Hub.
+
+Empezando a escribir el código--->
+En el APP.EJS (require express, declarar el puerto, setear carpeta estática, rutas, listener)
+En el archivo APP.EJS creamos la constante express=require('express')
+
+//Express
+const app = express();
+const port = process.env.PORT;
+
+//Carpeta estática
+No siempre tiene que ser la carpeta PUBLIC, sin embargo en la mayoría de los casos si. En nuestra carpeta PUBLIC también tendremos cosas como nuestro código REACT y relacionados al Front.
+Creamos la carpeta PUBLIC a primer nivel.
+
+//rutas
+
+
+
+//Listener
+
+app.listen(port,()=>{ //*Como primer argumento recibe el PORT, y como segundo, una función callBack opcional.
+    
+})
+
+Crear carpeta HELPERS, que van a contener las funciones generales reutilizables, etc. Puede llamarse UTILS también.
+Conectar con mongoose. Conectamos, pedimos la URI y la declaramos en las variables de Entorno .ENV
+
+Crear el archivo BD CONNECT.
+const mongoose = require ('mongoose')
+const conexion = () => { //le llamamos conecxion para evitar conflictos con el método connect.
+    try {
+        const respuesta = await mongoose.connect(process.env.URI_CONNECT);
+        console.log('Conectado a bbdd')
+        return respuesta.
+    }   catch (error) {
+        return {
+            respuesta: false,
+            console.log('No se ha podido conectar al servidor')
+        }
+    }
+}
+mongoose.connect()
+
+APICONTROLERS (Carpeta)
+vamos a conectar a través de express con el router.
+
+const express=require('express')
+const router=express.Router();
+
+Luego tenemos que conectar con cada uno de los endpoints que queremos crear, utilizando los métodos GET POST PUT DELETE.
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                    
+
+                    <td> <%= servicios[1].servicios %> </td>
+                    <td> <%= servicios[1].descripcion %> </td>

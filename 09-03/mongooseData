@@ -1,0 +1,16 @@
+Helpers:
+Son funciones auxiliares. Generalmente son reutilizables.
+Función validar, por ejemplo.
+
+Instanciammiento de Mongoose:
+
+Se instancia el modelo (MODEL) para compararlo con la base de datos que recibimos, de cara a poder utilizarlo de filtro y se ajuste a esos parámetros.
+
+Se conecta con mongoose+require, y destructuramos para acceder a Schema y model.
+
+Schema es una clase. => 'S'
+
+Esto se exporta y se lleva a frontControllers, y se hace el require.
+
+URL: Uniform Resource Locators
+URI: Identificador de recursos uniformes.

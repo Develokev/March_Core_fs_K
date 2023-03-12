@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>    //CLASS
+            class Persona { //no lleva asignación, es decir, no lleva '='
+                constructor(name, age) {
+                    let nombre = name;
+                    let edad = age;
+                }
+
+                get nombrePersona() {
+                    return
+                }
+
+
+            }
+
+            const persona1 = new Persona('ana', 30);
+            console.log(persona1.nombrePersona) //se está accediendo a la función del método constructor como si fuese una propiedad, con el '.nombrePersona', que en readlidad es nombrePersona() => function.
+
+            //Super operadores GET y SET, son funciones que suben y traen, dependiendo del contexto. Son parcialmente similares en casi cualquier lenguaje de programación.
+    </script>
+</body>
+</html>

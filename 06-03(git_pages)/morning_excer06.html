@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Pedirle al usuario una frase y decirle si es palíndromo o no.  Un palíndromo es una palabra o expresión que es igual si se lee de izquierda a derecha
+        que de derecha a izquierda. Ejemplos de palíndromos para probar: "La ruta nos aporto otro paso natural", “reconocer”, "Atar a la rata",
+        “Dábale arroz a la zorra el abad”, “Somos o no somos”, “A ti no, bonita”, “Allí ves a Sevilla”, “Amad a la dama”, “Amar da drama”, “Arriba la birra”. -->
+
+
+
+
+
+    <script>
+
+        const palindroma = () => ((str) {
+
+            const regExp = /[\W_]/g;   //expresion regular que usamos para eliminar todos los caracteres que no queremos.
+
+            const newString = str.replace(regExp, "").toLowerCase(); //la nueva string será pasada por la regExp + pasar las letras a minusculas.
+
+            const stringReversed = newString.split("").reverse().join(""); //hacemos SPLIT para quitar los espacios, REVERSE para darle la vuelta, y JOIN para unir la cadena de nuevo.
+
+            return newString === stringReversed ? "esta palabra es palindroma" : "esta palabra no es palindroma"; //Usamos el ternario para esperar porel parámetro  que nos conteste una cosa u otra dependiendo de si es verdadera o no.
+        })
+
+            console.log(palindromas("Somos o no somos")); // es palindromo
+    </script>
+</body>
+</html>

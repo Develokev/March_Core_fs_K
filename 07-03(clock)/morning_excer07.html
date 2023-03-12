@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="testing"></h2>
+    <script>
+
+          // Muestra un reloj en pantalla con fecha y hora y que se actualice cada segundo. Usar la función setTimeout().
+
+        const actualTime = () => {
+            const date = new Date(); //el newDAte instancia la hora, fecha y momento actual según el ordenador.
+
+            document.getElementById('testing').innerHTML = date.toLocaleTimeString();  //usamos el localeTimeString para obtener de eso, solamente la HORA.
+
+            setTimeout(function() {actualTime(), 1000});
+        }
+
+        actualTime();
+
+    </script>
+  </body>
+</html>
